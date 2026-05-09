@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Resume Analyzer</title>
+    <meta name="description" content="A smart, modern resume analyzer that detects skills and checks authenticity.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>Smart <span>Resume Analyzer</span></h1>
+            <p>Paste your resume below to detect skills, score your profile, and verify authenticity.</p>
+        </header>
+
+        <main class="dashboard">
+            <div class="input-panel glass-panel">
+                <h2>Resume Content</h2>
+                <textarea id="resume-text" placeholder="Paste your resume text here..."></textarea>
+                <button id="analyze-btn" class="glow-btn">Analyze Resume</button>
+            </div>
+
+            <div class="results-panel glass-panel hidden" id="results-panel">
+                <div class="results-header">
+                    <h2>Analysis Results</h2>
+                    <div id="authenticity-badge" class="badge"></div>
+                </div>
+
+                <div class="score-container">
+                    <div class="circular-progress" id="score-progress">
+                        <span class="progress-value" id="score-value">0%</span>
+                    </div>
+                    <div class="score-label">Resume Score</div>
+                </div>
+
+                <div class="skills-container">
+                    <div class="skills-section">
+                        <h3>Detected Skills</h3>
+                        <div class="tags" id="detected-skills">
+                            <!-- Tags injected via JS -->
+                        </div>
+                    </div>
+                    
+                    <div class="skills-section">
+                        <h3>Missing Core Skills</h3>
+                        <div class="tags missing" id="missing-skills">
+                            <!-- Tags injected via JS -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="suggestions-section">
+                    <h3>Improvement Suggestions</h3>
+                    <ul id="suggestions-list">
+                        <!-- Suggestions injected via JS -->
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
